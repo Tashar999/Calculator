@@ -8,23 +8,24 @@
 </head>
 <body>
     <div id="calculator">
-        <div id="display">123</div>
+        <div id="display"></div>
         <div id="content">
-            <button onclick = "">0</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>÷</button>
+            <button onclick = "addToDisplay(0)">0</button>
+            <button onclick ="addToDisplay(1)">1</button>
+            <button onclick ="addToDisplay(2)">2</button>
+            <button onclick ="addToDisplay(3)">3</button>
+            <button onclick ="addToDisplay(4)">4</button>
+            <button onclick ="addToDisplay(5)">5</button>
+            <button onclick ="addToDisplay(6)">6</button>
+            <button onclick ="addToDisplay(7)">7</button>
+            <button onclick ="addToDisplay(8)">8</button>
+            <button onclick ="addToDisplay(9)">9</button>
+            <button onclick ="operatorChoice('+')">+</button>
+            <button onclick ="operatorChoice('-')">-</button>
+            <button onclick ="operatorChoice('*')">x</button>
+            <button onclick ="operatorChoice('/')">÷</button>
             <button onclick = clearDisplay(); style="margin-top: 10px;">Clear</button>
+            <button onclick = calc(); style="margin-top: 10px;">=</button>
             
         </div>
 
