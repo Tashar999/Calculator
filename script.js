@@ -3,6 +3,7 @@ let b = 0;
 let operator = "";
 let result = null
 const display = document.getElementById('display')
+yes = ''
 
 function clearDisplay () {
     display.textContent = ""
@@ -13,10 +14,7 @@ function clearDisplay () {
 }
 
 function addToDisplay (input) {
-    
-    if (result != null) {
-        clearDisplay();
-    }
+    result = null
     display.textContent += input
 }
 
@@ -30,14 +28,14 @@ function operatorChoice (chosenOperator){
         result = null
     }
     if (operator && a !== null && display.textContent !== "") {
-        b = display.textContent;
-        result = operate(operator, parseFloat(a), parseFloat(b));
-        if (typeof result === "number" && !Number.isInteger(result)) {
-            result = parseFloat(result.toFixed(4));
-//   some digit function thing
-        }
-        display.textContent = result;
+        b = display.textContent
+        console.log(b)
+        calc()
+        yes = 'true'
+        display.textContent = result
         a = result;
+        console.log(a)
+        operator = chosenOperator
     } else if (display.textContent !== ""){
         a = display.textContent;
     }
@@ -46,12 +44,15 @@ function operatorChoice (chosenOperator){
 }
 
 function calc () {
-    if (a === null || !operator) return;
-    if (display.textContent === "") {
-        b = a;
-    } else {
-        b = display.textContent
+    if (yes = 'true') {
+        return
     }
+        else if (a === null || !operator) return;
+        if (display.textContent === "") {
+        b = a;
+        } else {
+        b = display.textContent
+        }
     result = operate(operator, parseFloat(a), parseFloat(b))
     if (typeof result === "number" && !Number.isInteger(result)) {
         result = parseFloat(result.toFixed(4));
