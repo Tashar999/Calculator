@@ -3,7 +3,6 @@ let b = 0;
 let operator = "";
 let result = null
 const display = document.getElementById('display')
-yes = ''
 
 function clearDisplay () {
     display.textContent = ""
@@ -31,11 +30,9 @@ function operatorChoice (chosenOperator){
         b = display.textContent
         console.log(b)
         calc()
-        yes = 'true'
         display.textContent = result
         a = result;
         console.log(a)
-        operator = chosenOperator
     } else if (display.textContent !== ""){
         a = display.textContent;
     }
@@ -44,10 +41,7 @@ function operatorChoice (chosenOperator){
 }
 
 function calc () {
-    if (yes = 'true') {
-        return
-    }
-        else if (a === null || !operator) return;
+        if (a === null || !operator) return;
         if (display.textContent === "") {
         b = a;
         } else {
