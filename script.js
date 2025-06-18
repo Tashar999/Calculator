@@ -2,6 +2,12 @@ let a = 0;
 let b = 0;
 let operator = "";
 
+function clearDisplay () {
+    const display = document.getElementById('display')
+    display.textContent = ""
+}
+
+
 function operate (operator, a, b) {
     if (operator == '+'){
         add(a, b)
